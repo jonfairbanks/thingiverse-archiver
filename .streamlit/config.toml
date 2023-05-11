@@ -1,0 +1,10 @@
+[server]
+#port = 80
+
+[theme]
+base="dark"
+primaryColor="orange"
+font="sans serif"
+
+[browser]
+gatherUsageStats = false
