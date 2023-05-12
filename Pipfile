@@ -6,8 +6,10 @@ name = "pypi"
 [packages]
 streamlit = "*"
 watchdog = "*"
+python-dotenv = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.11"

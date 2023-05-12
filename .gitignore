@@ -1,2 +1,8 @@
+run.sh
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 *.zip
 collection_*/
