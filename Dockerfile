@@ -2,7 +2,6 @@
 FROM python:3.9-alpine3.14 as builder
 
 RUN apk update && apk add python3-dev gcc libc-dev
-RUN pip install --upgrade pip
 RUN pip install pipenv streamlit
 
 WORKDIR /app
