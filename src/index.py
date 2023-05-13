@@ -29,9 +29,10 @@ hide_streamlit_style = """
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+
 def google_analytics():
     st.markdown(
-    """
+        """
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-**********"></script>
         <script>
@@ -40,7 +41,10 @@ def google_analytics():
             gtag('js', new Date());
             gtag('config', 'G-**********');
         </script>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
+
 
 def main():
     st.title("Thingiverse Collection Archiver")
