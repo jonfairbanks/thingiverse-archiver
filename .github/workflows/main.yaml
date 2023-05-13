@@ -115,8 +115,8 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@v3
         with:
-          path: /tmp/.buildx-cache/${{ runner.os }}-${{ steps.setup-buildx.outputs.name }}-${{ hashFiles('**/Dockerfile') }}
-          key: ${{ runner.os }}-buildx-${{ steps.vars.outputs.sha_short }}-{{ hashFiles('**/Dockerfile') }}
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
 
