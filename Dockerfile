@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.9-slim-bullseye as builder
+FROM python:3.11-slim-bullseye as builder
 
 RUN apt-get -qq update && apt-get -qq install python3-dev gcc libc-dev -y
 RUN pip install pipenv
@@ -10,7 +10,7 @@ RUN pipenv lock && pipenv requirements > requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt --prefix=/install
 
 # Final stage
-FROM python:3.9-slim-bullseye
+FROM python:3.11-slim-bullseye
 
 WORKDIR /app
 
