@@ -1,7 +1,7 @@
 # Build stage
 FROM python:3.9-slim-bullseye as builder
 
-RUN apk update && apk add python3-dev gcc libc-dev
+RUN apt-get -qq update && apt-get -qq install python3-dev gcc libc-dev -y
 RUN pip install pipenv
 
 WORKDIR /app
