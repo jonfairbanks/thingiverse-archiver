@@ -60,7 +60,7 @@ def main():
         zip_path = None  # Default value for zip_path
         if submit_button and url:
             url_pattern = re.compile(
-                r"^https://www.thingiverse.com/\w+/collections/\w+/things$"
+                r"^https://www\.thingiverse\.com/\w+/collections/\w+/things$"
             )
             if url_pattern.match(url):
                 collection_id = re.search(r"/collections/(\d+)/", url).group(1)
