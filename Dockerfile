@@ -9,13 +9,17 @@ COPY ./src/Pipfile* ./
 RUN pipenv lock && pipenv requirements > requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt --prefix=/install
 
+#
+# ----------------------------------------------------------------------
+#
+
 # Final stage
 FROM python:3.11-slim-bullseye
 
-# Keeps Python from generating .pyc files in the container
+# Don't generate .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
 
-# Turns off buffering for easier container logging
+# Turn off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
 # Copy only the installed packages from the build stage
